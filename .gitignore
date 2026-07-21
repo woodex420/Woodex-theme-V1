@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+
+# Environment files (keep .env.example only)
+.env
+.env.local
+.env.development
+.env.production
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Envrc
+.envrc
+
+# Uploads (runtime data)
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Runtime
+pids/
+*.pid
+*.seed
+
+# Coverage
+coverage/
+
+# Misc
+*.tgz
+.eslintcache

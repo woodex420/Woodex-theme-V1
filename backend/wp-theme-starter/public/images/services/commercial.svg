@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="comBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8e0d0"/>
+      <stop offset="100%" stop-color="#c6a15b" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#comBg)"/>
+  <g transform="translate(0,400)" opacity="0.5">
+    <rect x="0" y="0" width="1600" height="600" fill="#211C18" opacity="0.2"/>
+    <rect x="100" y="100" width="350" height="500" rx="12" fill="#211C18" opacity="0.15"/>
+    <rect x="500" y="80" width="600" height="540" rx="12" fill="#211C18" opacity="0.15"/>
+    <rect x="1150" y="100" width="350" height="500" rx="12" fill="#211C18" opacity="0.15"/>
+  </g>
+  <g transform="translate(0,150)" opacity="0.6">
+    <rect x="150" y="0" width="60" height="200" fill="#c6a15b" opacity="0.2"/>
+    <rect x="1390" y="0" width="60" height="200" fill="#c6a15b" opacity="0.2"/>
+  </g>
+  <text x="800" y="920" text-anchor="middle" font-family="serif" font-size="24" fill="#211C18" opacity="0.5">Commercial Interior Design</text>
+</svg>
