@@ -488,7 +488,7 @@ export default function PlaceholderTheme() {
         setTheme((prev) => {
           const next = { ...prev };
           keys.forEach((k) => {
-            (next as Record<string, unknown>)[k] = (DEFAULT_THEME as Record<string, unknown>)[k];
+            (next as unknown as Record<string, unknown>)[k] = (DEFAULT_THEME as unknown as Record<string, unknown>)[k];
           });
           loadAllFonts(next);
           addToHistory(next, `Reset ${resetCategory}`);
@@ -1250,8 +1250,8 @@ function ImportExportTab({
   function getImportDiff(original: ThemeData, incoming: ThemeData) {
     const changes: { field: string; from: string; to: string }[] = [];
     THEME_KEYS.forEach((key) => {
-      const a = String((original as Record<string, unknown>)[key]);
-      const b = String((incoming as Record<string, unknown>)[key]);
+      const a = String((original as unknown as Record<string, unknown>)[key]);
+      const b = String((incoming as unknown as Record<string, unknown>)[key]);
       if (a !== b) {
         changes.push({ field: key, from: a, to: b });
       }
@@ -1504,7 +1504,7 @@ function ThemeHistory({
       </div>
 
       <div className="flex items-center gap-3 overflow-x-auto pb-2">
-        {history.map((entry, i) => {
+        {history.map((entry) => {
           const date = new Date(entry.timestamp);
           const timeStr = date.toLocaleString('en-US', {
             month: 'short',

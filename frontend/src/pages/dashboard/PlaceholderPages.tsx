@@ -163,13 +163,7 @@ BLOCK_TYPES.forEach((bt) => {
 
 const LIBRARY_STORAGE_KEY = 'woodex-section-library';
 
-const DEFAULT_BLOCK_SETTINGS: BlockSettings = {
-  backgroundColor: '',
-  textColor: '',
-  padding: '',
-  textAlign: 'left',
-  visibilityMode: 'always',
-};
+/** Not yet wired to the builder. */
 
 /* ================================================================== */
 /*  Default Library Sections (pre-seeded on first load)                */

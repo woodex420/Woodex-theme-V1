@@ -18,13 +18,10 @@ import {
   Mail,
   Users,
   Zap,
-  Hash,
   Eye,
   EyeOff,
-  Globe,
   MessageSquare,
   Calendar,
-  X,
 } from 'lucide-react';
 import { adminFetch } from '@/lib/auth';
 import AdminModal from '@/components/dashboard/ui/AdminModal';
@@ -236,7 +233,7 @@ function SupportQueueTab({
 }) {
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
+  const [, setError] = useState('');
   const [statusFilter, setStatusFilter] = useState<string>('all');
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [replyText, setReplyText] = useState('');

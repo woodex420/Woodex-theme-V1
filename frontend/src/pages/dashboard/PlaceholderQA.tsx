@@ -553,7 +553,7 @@ export default function PlaceholderQA() {
   const [historyOpen, setHistoryOpen] = useState(false);
   const [errorIssues, setErrorIssues] = useState<ErrorIssue[]>([]);
 
-  const toastTimer = useRef<ReturnType<typeof setTimeout>>();
+  const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   /* -- Show toast --------------------------------------------------- */
   const showToast = useCallback(

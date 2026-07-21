@@ -186,19 +186,6 @@ function formatDate(iso: string): string {
   }
 }
 
-/** Strip markdown formatting for plain-text previews. */
-function stripMarkdown(md: string): string {
-  return md
-    .replace(/#{1,6}\s?/g, '')
-    .replace(/\*\*(.+?)\*\*/g, '$1')
-    .replace(/\*(.+?)\*/g, '$1')
-    .replace(/`(.+?)`/g, '$1')
-    .replace(/\[(.+?)\]\(.+?\)/g, '$1')
-    .replace(/[-*]\s/g, '')
-    .replace(/\n+/g, ' ')
-    .trim();
-}
-
 /** Load custom templates from localStorage, merged with built-in ones. */
 function loadTemplates(): BlogTemplate[] {
   try {

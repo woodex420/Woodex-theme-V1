@@ -230,7 +230,7 @@ export function BuilderProvider({ children }: { children: ReactNode }) {
       const existing = pageData.sections.find((s) => s.path === path);
       if (existing) {
         existing.style = { ...existing.style, ...partial };
-        existing.updatedAt = Date.now();
+    (existing as unknown as Record<string, unknown>).updatedAt = Date.now();
       } else {
         pageData.sections.push({
           id: uid(),

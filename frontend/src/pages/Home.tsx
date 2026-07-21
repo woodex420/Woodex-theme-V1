@@ -40,7 +40,7 @@ export default function Home() {
   const { data: apiArticles } = useApiData('/articles', ARTICLES);
   const services = apiServices;
   const featured = apiProjects.filter((p) => p.featured);
-  const homeServices = services.filter((s) => HOME_SERVICES.includes(s.slug));
+  void services.filter((s) => HOME_SERVICES.includes(s.slug));
 
   return (
     <>

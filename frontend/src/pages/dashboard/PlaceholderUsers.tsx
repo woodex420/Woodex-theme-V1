@@ -109,13 +109,13 @@ function AvatarInitial({ name, gold }: { name: string; gold?: boolean }) {
 export default function PlaceholderUsers() {
   const currentUser = getUser();
 
-  const [users, setUsers] = useState<UserRow[]>(() => {
+  const [users] = useState<UserRow[]>(() => {
     // Merge the logged-in user data with demo list (avoid duplicates by username)
     const authUser = getUser();
     if (!authUser) return DEMO_USERS;
     const merged = DEMO_USERS.map((u) =>
       u.username === authUser.username
-        ? { ...u, ...authUser, _id: u._id, lastLogin: u.lastLogin, createdAt: u.createdAt }
+        ? { ...u, ...authUser, role: authUser.role as UserRow['role'], _id: u._id, lastLogin: u.lastLogin, createdAt: u.createdAt }
         : u,
     );
     // If current user not in demo list, prepend
@@ -123,6 +123,7 @@ export default function PlaceholderUsers() {
       merged.unshift({
         _id: 'current-user',
         ...authUser,
+        role: authUser.role as UserRow['role'],
         lastLogin: new Date().toISOString(),
         createdAt: new Date().toISOString(),
       });

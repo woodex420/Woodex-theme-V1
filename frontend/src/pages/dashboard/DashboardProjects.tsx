@@ -11,7 +11,6 @@ import {
   X,
   GripVertical,
   Image as ImageIcon,
-  ChevronRight,
   Star,
   Briefcase,
   Layers,

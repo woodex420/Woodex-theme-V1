@@ -204,7 +204,7 @@ export default function EditableElement({
   /* ================================================================== */
 
   const isSelected = state.selectedPath === path;
-  const isHovered = state.hoveredPath === path;
+  // const _isHovered = state.hoveredPath === path; // kept for reference
 
   return (
     <div
@@ -238,7 +238,7 @@ export default function EditableElement({
         if (overrideSrc && React.isValidElement(child)) {
           // If child is an img element, override src
           const tagName = (child.type as string) || '';
-          if (tagName === 'img' || (typeof child.type === 'function' && child.props?.src !== undefined)) {
+          if (tagName === 'img' || (typeof child.type === 'function' && (child.props as Record<string, unknown>)?.src !== undefined)) {
             return React.cloneElement(child as React.ReactElement<Record<string, unknown>>, {
               src: overrideSrc,
             });

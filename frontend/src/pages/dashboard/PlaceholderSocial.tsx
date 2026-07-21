@@ -1,6 +1,5 @@
 import { useEffect, useState, useCallback, useMemo } from 'react';
 import {
-  Share2,
   Plus,
   Pencil,
   Trash2,
@@ -16,7 +15,6 @@ import {
   RefreshCw,
   ToggleLeft,
   ToggleRight,
-  Search,
   Send,
   Clock,
   Image as ImageIcon,
@@ -822,7 +820,6 @@ export default function PlaceholderSocial() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {accounts.map((account) => {
                   const meta = PLATFORM_META[account.platform];
-                  const Icon = meta.icon;
 
                   return (
                     <div

@@ -1,5 +1,3 @@
-import type { ReactNode } from 'react';
-
 /**
  * Placeholder page for dashboard sections not yet implemented.
  */

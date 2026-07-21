@@ -14,7 +14,7 @@ export default function ServiceDetail() {
 
   useEffect(() => {
     if (service) {
-      document.title = ('metaTitle' in service ? service.metaTitle : service.title + ' | Woodex Interior');
+      document.title = service.metaTitle || service.title + ' | Woodex Interior';
       const meta = document.querySelector('meta[name="description"]');
       if (meta && 'metaDesc' in service) meta.setAttribute('content', service.metaDesc);
     }

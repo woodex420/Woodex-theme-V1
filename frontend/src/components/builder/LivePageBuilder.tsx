@@ -585,7 +585,7 @@ export default function LivePageBuilder({ children }: { children: ReactNode }) {
   const {
     isAdmin,
     builderEnabled,
-    currentPage,
+    currentPage: _currentPage,
     state,
     toggleBuilder,
     selectElement,

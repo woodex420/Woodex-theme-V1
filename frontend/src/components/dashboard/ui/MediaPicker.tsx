@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Image, Upload, X, Loader2 } from 'lucide-react';
+import { Image, Upload, Loader2 } from 'lucide-react';
 import { adminFetch } from '@/lib/auth';
 import AdminModal from './AdminModal';
 

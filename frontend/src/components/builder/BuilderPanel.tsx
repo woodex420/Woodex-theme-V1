@@ -107,7 +107,7 @@ function Section({
 
 /** Preset grid button (color swatch, radius, shadow, etc.) */
 function SwatchButton({
-  value,
+  value: _value,
   active,
   onClick,
   label,
@@ -672,8 +672,9 @@ function StyleTab() {
             {COLOR_PRESETS.map((c) => (
               <SwatchButton
                 key={c.key}
+                value={c.value}
                 active={style.backgroundColor === c.value}
-                color={c.value}
+                style={{ backgroundColor: c.value }}
                 label={c.label}
                 onClick={() => patch({ backgroundColor: c.value })}
               />
