@@ -61,7 +61,7 @@ export function styleToCss(style: StyleOverrides | undefined): React.CSSProperti
 
   // Effects
   if (style.boxShadow && style.boxShadow !== 'none') css.boxShadow = style.boxShadow;
-  if (style.opacity !== undefined) css.opacity = parseFloat(style.opacity) as number;
+  if (style.opacity !== undefined) css.opacity = parseFloat(style.opacity as string);
 
   // Size
   if (style.width) css.width = style.width;
